@@ -1,22 +1,44 @@
 {
-  "name": "gavinlau_main",
+  "name": "climbing-comp-io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fulldev": "ts-node --project tsconfig.server.json server/index.ts"
   },
   "dependencies": {
-    "@types/node": "18.14.2",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
-    "next": "13.2.3",
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/yeseva-one": "^4.5.10",
+    "@next/font": "13.1.6",
+    "@prisma/client": "4.9.0",
+    "@types/node": "^18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "date-fns": "^2.29.3",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "express": "^4.18.2",
+    "framer-motion": "^8.5.2",
+    "gray-matter": "^4.0.3",
+    "next": "13.1.6",
+    "prisma": "^4.9.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.5"
+    "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.3",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.16",
+    "prisma": "^4.9.0",
+    "ts-node": "^10.9.1"
   }
 }
