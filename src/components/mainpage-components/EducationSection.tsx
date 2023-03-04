@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import useCheckMobileScreen from "Main/hooks/useCheckMobileScreen"
 import { useState } from "react"
 import EducationItem from "../EducationItem"
+import SlideInSection from "../SlideInSection"
 
 const EducationSection = () => {
   const isMobile = useCheckMobileScreen()
@@ -24,24 +25,25 @@ const EducationSection = () => {
           <Spacer /><Badge>{collapsed ? "Expand" : "Collapse"}</Badge><Spacer />
         </HStack>
       </Box>
-      {collapsed ? <Divider /> :
-        <Box>
-          <SimpleGrid
-            spacingY={5}
-            pt={5}>
-            <GridItem>
-              <EducationItem degree="Master of Data Science and Analytics" location="University of Calgary, Calgary, AB" date="September 2022 – Current" />
-            </GridItem>
-            <GridItem>
-              <EducationItem degree="Bachelor of Medicine, Bachelor of Surgery (MBBS)" location="Li Ka Shing Faculty of Medicine, Hong Kong University, Hong Kong	" date="September 2019 – 2022" />
-            </GridItem>
-            <GridItem>
-              <EducationItem degree="Bachelor of Science, Neuroscience, Honors with Distinction" location="Hotchkiss Brain Institute, University of Calgary, Calgary, AB" date="Graduated: 	June 2018" />
-            </GridItem>
+      <SlideInSection direction="right">
+        {collapsed ? <Divider /> :
+          <Box>
+            <SimpleGrid
+              spacingY={5}
+              pt={5}>
+              <GridItem>
+                <EducationItem degree="Master of Data Science and Analytics" location="University of Calgary, Calgary, AB" date="September 2022 – Current" />
+              </GridItem>
+              <GridItem>
+                <EducationItem degree="Bachelor of Medicine, Bachelor of Surgery (MBBS)" location="Li Ka Shing Faculty of Medicine, Hong Kong University, Hong Kong	" date="September 2019 – 2022" />
+              </GridItem>
+              <GridItem>
+                <EducationItem degree="Bachelor of Science, Neuroscience, Honors with Distinction" location="Hotchkiss Brain Institute, University of Calgary, Calgary, AB" date="Graduated: 	June 2018" />
+              </GridItem>
 
-          </SimpleGrid>
-        </Box>
-      }
+            </SimpleGrid>
+          </Box>
+        }</SlideInSection>
     </Box>
   )
 }

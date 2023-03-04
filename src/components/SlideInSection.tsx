@@ -5,7 +5,10 @@ import useCheckMobileScreen from "Main/hooks/useCheckMobileScreen";
 
 
 
-const SlideInSection = (props: BoxProps & { direction: "left" | "right" }) => {
+const SlideInSection = (props: BoxProps & {
+  /**Direction the section ENTERS from */
+  direction: "left" | "right"
+}) => {
   const isMobile = useCheckMobileScreen();
   const { direction, children } = props
   const { ref, inView } = useInView({

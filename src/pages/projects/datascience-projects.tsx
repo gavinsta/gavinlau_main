@@ -107,14 +107,14 @@ export default function DataScienceProjects() {
         <Text >Interactive embeds to come.</Text>
         <Box>
           <SimpleGrid spacing={5}>
-            <GridItem>
+            <GridItem padding={5}>
               <Card>
                 <Text fontSize={30}>AirBnB Data Exploration</Text>
                 <Image alt='screenshot of tableau dashboard exploring airbnb trends' src={"/screenshots/airbnb_datathon.png"} width={"100%"} />
 
               </Card>
             </GridItem>
-            <GridItem>
+            <GridItem padding={5}>
               <Card>
                 <Text fontSize={30}>Kickstarter Data Exploration</Text>
                 <Image alt='screenshot of tableau dashboard exploring kickstarter trends' src={"/screenshots/kickstarter_datathon.png"} width={"100%"} />
