@@ -17,7 +17,9 @@ const EducationSection = () => {
       <Box onClick={() => {
         setCollapsed(!collapsed)
       }}>
-        <Heading textAlign={'center'}>Education 🎓</Heading>
+        <Heading
+          id='education'
+          textAlign={'center'}>Education 🎓</Heading>
         <HStack>
           <Spacer /><Badge>{collapsed ? "Expand" : "Collapse"}</Badge><Spacer />
         </HStack>

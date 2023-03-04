@@ -52,6 +52,50 @@ const Button = defineStyleConfig({
   },
 })
 
+const Link = defineStyleConfig({
+  // The styles all button have in common
+  baseStyle: {
+    fontWeight: 'bold',
+    whiteSpace: 'normal',
+    borderRadius: 'base', // <-- border radius is same for all variants and sizes
+    borderImage: "conic-gradient(from var(--angle), rgb(19, 55, 97), aqua, blue, rgb(19, 55, 97)) 1",
+    _hover: {
+      bg: ''
+    }
+  },
+  // Two sizes: sm and md
+  sizes: {
+    sm: {
+      fontSize: 'sm',
+      px: 4, // <-- px is short for paddingLeft and paddingRight
+      py: 3, // <-- py is short for paddingTop and paddingBottom
+    },
+    md: {
+      fontSize: 'md',
+      px: 6, // <-- these values are tokens from the design system
+      py: 4, // <-- these values are tokens from the design system
+    },
+  },
+  // Two variants: outline and solid
+  variants: {
+    subtle: {
+      textDecoration: 'underline',
+      textDecorationColor: 'teal',
+      textUnderlineOffset: '2px',
+      transition: 'text-underline-offset 0.2s ease-in',
+
+      _hover: {
+        textUnderlineOffset: '5px',
+        transition: 'text-underline-offset 0.2s ease-in'
+      },
+    },
+  },
+  // The default size and variant values
+  defaultProps: {
+    size: 'md',
+    variant: 'subtle',
+  },
+})
 // This function creates a set of function that helps us create multipart component styles.
 const helpers = createMultiStyleConfigHelpers(['menu', 'item'])
 
@@ -137,6 +181,7 @@ const theme = extendTheme({
   components: {
     Button,
     CardStyle,
+    Link,
     Tabs: tabsTheme,
   },
   styles: {

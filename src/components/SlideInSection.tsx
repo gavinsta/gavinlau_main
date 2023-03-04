@@ -9,7 +9,7 @@ const SlideInSection = (props: BoxProps & { direction: "left" | "right" }) => {
   const isMobile = useCheckMobileScreen();
   const { direction, children } = props
   const { ref, inView } = useInView({
-    threshold: 0.5, // Trigger animation when component is 50% in view
+    threshold: 0.2, // Trigger animation when component is 50% in view
     triggerOnce: true, // Only trigger animation once
   });
   const animationVariants = {
@@ -19,7 +19,7 @@ const SlideInSection = (props: BoxProps & { direction: "left" | "right" }) => {
   return (
     <Box
       as={motion.div}
-      initial={"hidden"}
+      initial={isMobile ? "visible" : "hidden"}
       variants={animationVariants}
       ref={ref}
       animate={inView || isMobile ? "visible" : "hidden"}

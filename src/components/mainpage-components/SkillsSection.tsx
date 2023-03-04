@@ -2,12 +2,15 @@ import { Badge, Box, Divider, GridItem, Heading, HStack, List, ListIcon, ListIte
 import useCheckMobileScreen from "Main/hooks/useCheckMobileScreen"
 import ExpandableList from "../ExpandableList"
 import SlideInSection from "../SlideInSection"
-import { SiCsharp, SiJavascript, SiMariadb, SiPrisma, SiPython, SiTableau, SiTypescript } from "react-icons/si"
+import { SiCsharp, SiDocker, SiJavascript, SiMariadb, SiMongodb, SiNextdotjs, SiPostgresql, SiPrisma, SiPython, SiReact, SiTableau, SiTypescript, SiUnity } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
 import { useState } from "react"
+import useWindowDimensions from "Main/hooks/useWindowDimensions"
 const SkillsSection = () => {
   const [collapsed, setCollapsed] = useState(false)
   const isMobile = useCheckMobileScreen();
+  const { width } = useWindowDimensions();
+  const smallScreen = width < 1000
   return (<SlideInSection direction='right'>
     <Box
       padding={isMobile ? 5 : 10}
@@ -17,6 +20,7 @@ const SkillsSection = () => {
         setCollapsed(!collapsed)
       }}>
         <Heading
+          id='technical-skills'
           textAlign={'center'}>Technical Skills 💻 </Heading>
         <HStack>
           <Spacer /><Badge>{collapsed ? "Expand" : "Collapse"}</Badge><Spacer />
@@ -26,7 +30,7 @@ const SkillsSection = () => {
       {collapsed ?
         <Divider />
         :
-        <SimpleGrid columns={isMobile ? 1 : 3} spacing={5} spacingY={5}
+        <SimpleGrid columns={isMobile ? 1 : smallScreen ? 2 : 3} spacing={5} spacingY={5}
           h={isMobile ? "100%" : "100%"}>
           <GridItem>
             <ExpandableList listName='Statistics'>
@@ -67,7 +71,20 @@ const SkillsSection = () => {
             </ExpandableList>
           </GridItem>
           <GridItem>
-            <ExpandableList listName='Databases'>
+            <ExpandableList listName='Frameworks'>
+              <ListItem>
+                <ListIcon as={SiReact} />React
+              </ListItem>
+              <ListItem>
+                <ListIcon as={SiNextdotjs} />NEXT.js (what this site is built on)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={SiUnity} />Unity (a game engine, not a framework, I know)
+              </ListItem>
+            </ExpandableList>
+          </GridItem>
+          <GridItem>
+            <ExpandableList listName='Databases & Environments'>
               <ListItem>
                 <ListIcon as={SiPrisma} />Prisma
               </ListItem>
@@ -75,11 +92,15 @@ const SkillsSection = () => {
                 <ListIcon as={SiMariadb} />SQL (MariaDB)
               </ListItem>
               <ListItem>
-                PostgreSQL
+                <ListIcon as={SiPostgresql} />PostgreSQL
               </ListItem>
               <ListItem>
-                MongoDB
+                <ListIcon as={SiMongodb} />MongoDB
               </ListItem>
+              <ListItem>
+                <ListIcon as={SiDocker} />Docker
+              </ListItem>
+
             </ExpandableList>
           </GridItem>
           <GridItem>
@@ -98,6 +119,7 @@ const SkillsSection = () => {
               </ListItem>
             </ExpandableList>
           </GridItem>
+
         </SimpleGrid>}
     </Box>
   </SlideInSection>)

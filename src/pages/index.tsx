@@ -1,33 +1,118 @@
 
 import { Inter } from '@next/font/google'
-import styles from 'Main/styles/Home.module.css'
-//import Image from 'next/image'
+import NextLink from 'next/link'
 import {
-  Heading, Grid, GridItem, Button, Box, Container, Image, keyframes,
-  Tabs, TabList, TabPanels, Tab, TabPanel, Text, HStack, Spacer, Stack, SimpleGrid, ListItem
+  Heading, GridItem, Box, Text, HStack, Spacer, Stack, SimpleGrid, IconButton, Link
 } from '@chakra-ui/react'
-import HeadingLink from 'Main/components/HeadingLink'
-import Card from 'Main/components/Card'
-import LoadingDots from 'Main/components/LoadingDots'
 import { motion } from 'framer-motion';
-import SlideInImage from 'Main/components/SlideInImage'
 import useCheckMobileScreen from 'Main/hooks/useCheckMobileScreen'
 import Post from 'Main/interfaces/post'
-//import skillsTextPath from 'Main/components/skills.md'
-import { useEffect, useState } from 'react'
 import { getAllPosts } from 'Main/lib/api'
-import PostPreview from 'Main/components/PostPreview'
 import ProfilePicture from 'Main/components/ProfilePicture'
-import SlideInSection from 'Main/components/SlideInSection'
-import ExpandableList from 'Main/components/ExpandableList'
 import SkillsSection from 'Main/components/mainpage-components/SkillsSection'
 import ProjectsSection from 'Main/components/mainpage-components/ProjectsSection'
 import AboutMe from 'Main/components/mainpage-components/AboutMeSection'
 import EducationSection from 'Main/components/mainpage-components/EducationSection'
+import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
+import { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
   allPosts: Post[]
+}
+
+function IndexMenu() {
+  const [collapsed, setCollapsed] = useState(false)
+  const isMobile = useCheckMobileScreen()
+  const hide = {
+    button: {
+      y: -500,
+      transition: {
+        duration: 0.5,
+      }
+    },
+    bar: {
+      y: -500,
+      transition: {
+        duration: 0.5,
+      }
+    }
+
+  }
+  const show = {
+    button: {
+      y: 0,
+      transition: {
+        duration: 0.5,
+      }
+    },
+    bar: {
+      y: 0,
+      transition: {
+        duration: 0.5,
+      }
+    }
+
+  }
+  return (<>
+    <HStack position={'fixed'}
+      padding={1}
+      pl={2}
+      pr={10}
+      boxShadow={'2xl'}
+      as={motion.div}
+      initial={collapsed ? show.bar : hide.bar}
+      animate={collapsed ? hide.bar : show.bar}
+      width={'100%'}
+      top={0}
+      background={'background.gunmetal'}
+      zIndex='sticky'>
+      <IconButton
+        borderColor={""}
+        borderWidth=""
+        aria-label='expand menu'
+        onClick={() => {
+          setCollapsed(true)
+        }}
+        icon={<AiOutlineMenuFold />} />
+      {/* <Link as={NextLink} href="/">Home</Link> */}
+      <Spacer />
+      <SimpleGrid columns={isMobile ? 1 : 5} spacingX={10}>
+
+        <GridItem>
+          <Link as={NextLink} href="#about-me">◾️ About Me</Link>
+        </GridItem>
+        <GridItem>
+          <Link as={NextLink} href="#education">◾️ Education</Link>
+
+        </GridItem>
+        <GridItem>
+          <Link as={NextLink} href="#technical-skills">◾️ Skills & Technologies</Link>
+
+        </GridItem>
+        <GridItem>
+          <Link as={NextLink} href="#projects">◾️ Projects</Link>
+
+        </GridItem>
+      </SimpleGrid>
+
+
+    </HStack>
+    <IconButton
+      bg='background.gunmetal'
+      position={'fixed'}
+      top={2}
+      left={2}
+      as={motion.button}
+      initial={collapsed ? hide.button : show.button}
+      animate={collapsed ? show.button : hide.button}
+      zIndex='sticky'
+      aria-label='expand menu'
+      onClick={() => {
+        setCollapsed(false)
+      }}
+      icon={<AiOutlineMenuUnfold />} />
+  </>)
 }
 export default function Index({ allPosts }: Props) {
   const isMobile = useCheckMobileScreen()
@@ -36,6 +121,7 @@ export default function Index({ allPosts }: Props) {
   console.log(`CWD is ${process.cwd()}`)
   return (
     <>
+      <IndexMenu />
       <Box
 
         padding={isMobile ? 5 : 40}

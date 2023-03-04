@@ -1,4 +1,4 @@
-import { Box, BoxProps, ChakraProps, defineStyleConfig, ThemingProps, useStyleConfig } from "@chakra-ui/react";
+import { Box, BoxProps, ChakraProps, defineStyleConfig, ThemingProps, transition, useStyleConfig } from "@chakra-ui/react";
 
 export const CardStyle = defineStyleConfig({
   // The styles all Cards have in common
@@ -8,6 +8,12 @@ export const CardStyle = defineStyleConfig({
     background: 'linear-gradient(35deg, #3E3E3B 50%,#1C1C1A) ',
     alignItems: 'center',
     gap: 6,
+    transition: 'transform 0.5s ease-in-out',
+    _hover: {
+      boxShadow: '2xl',
+      transform: 'scale(1.1)',
+      transition: 'transform 0.5s ease-in-out',
+    }
   },
   // Two variants: rounded and smooth
   variants: {
