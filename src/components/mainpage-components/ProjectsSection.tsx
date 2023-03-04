@@ -107,7 +107,7 @@ const ProjectsSection = () => {
               <GridItem>
                 <Card overflowY={'hidden'} h={"500"}>
                   <Heading textAlign={'center'}>Unnamed Project</Heading>
-                  <Text>Alternate title: "Couch Campaigners"</Text>
+                  <Text>Alternate title: &quot;Couch Campaigners&quot;</Text>
                   <Text textAlign={'center'}>An adventure role-playing party game, where players use their mobile devices (or any browser) as the controller.</Text>
                   <Text>Passion project.</Text>
                   <Text>Tools:</Text>
