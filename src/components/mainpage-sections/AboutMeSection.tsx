@@ -60,7 +60,7 @@ const AboutMe = () => {
                   _selected={{
                     textDecorationColor: 'teal'
                   }}
-                  as={NextLink} href="#education">Master of Data Science and Analytics</Link> at the University of Calgary. I'm excited for whatever opportunities present themselves next.
+                  as={NextLink} href="#education">Master of Data Science and Analytics</Link> at the University of Calgary. I&#39;m excited for whatever opportunities present themselves next.
                 <br />
                 <br />
                 I&#39;ve always had a strong interest in video game developement, science and design. Recently, my interest in video games has led me to focus heavily on applying the principles of interactivity, engagment and design to data science and programming.
