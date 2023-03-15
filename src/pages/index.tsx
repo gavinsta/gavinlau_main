@@ -9,10 +9,10 @@ import useCheckMobileScreen from 'Main/hooks/useCheckMobileScreen'
 import Post from 'Main/interfaces/post'
 import { getAllPosts } from 'Main/lib/api'
 import ProfilePicture from 'Main/components/ProfilePicture'
-import SkillsSection from 'Main/components/mainpage-components/SkillsSection'
-import ProjectsSection from 'Main/components/mainpage-components/ProjectsSection'
-import AboutMe from 'Main/components/mainpage-components/AboutMeSection'
-import EducationSection from 'Main/components/mainpage-components/EducationSection'
+import SkillsSection from 'Main/components/mainpage-sections/SkillsSection'
+import ProjectsSection from 'Main/components/mainpage-sections/ProjectsSection'
+import AboutMe from 'Main/components/mainpage-sections/AboutMeSection'
+import EducationSection from 'Main/components/mainpage-sections/EducationSection'
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
 import { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
@@ -55,7 +55,8 @@ function IndexMenu() {
 
   }
   return (<>
-    <HStack position={'fixed'}
+    <HStack
+      position={'fixed'}
       padding={1}
       pl={2}
       pr={10}
@@ -65,7 +66,10 @@ function IndexMenu() {
       animate={collapsed ? hide.bar : show.bar}
       width={'100%'}
       top={0}
-      background={'background.gunmetal'}
+      bg={`#3E3E3BB6`}
+      _hover={{
+        background: `linear-gradient(35deg, #3E3E3B 50%,#1C1C1A)`
+      }}
       zIndex='sticky'>
       <IconButton
         borderColor={""}
@@ -131,7 +135,11 @@ export default function Index({ allPosts }: Props) {
         <Box
           padding={isMobile ? 10 : 20}
           borderRadius={"15"}
-          bg={'linear-gradient(35deg, #3E3E3B 50%,#1C1C1A) '}
+          bg={`linear-gradient(35deg, #3E3E3BB6 50%,#97144DB3), url('/photos/hongkong-on-boat.jpg') `}
+          //backgroundImage={'/photos/hongkong-on-boat.jpg'}
+          //linear-gradient(35deg, #3E3E3BB6 50%,#1C1C1AB3)
+          backgroundSize="cover"
+          backgroundPosition={'center'}
         >
           {isMobile ? <Stack
             w={"100%"}
@@ -139,6 +147,7 @@ export default function Index({ allPosts }: Props) {
             as={motion.div}
             initial={{ x: 1000 }}
             animate={{ x: 0, transition: { duration: 1, bounce: 0.3, type: 'spring' } }}
+
           >
             <ProfilePicture />
             <Heading fontSize={40}>Gavin Lau</Heading>

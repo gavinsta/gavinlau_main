@@ -2,7 +2,7 @@ import { Badge, Box, Divider, GridItem, Heading, HStack, List, ListIcon, ListIte
 import useCheckMobileScreen from "Main/hooks/useCheckMobileScreen"
 import ExpandableList from "../ExpandableList"
 import SlideInSection from "../SlideInSection"
-import { SiAmazonaws, SiCsharp, SiDigitalocean, SiDocker, SiJavascript, SiMariadb, SiMongodb, SiNextdotjs, SiPostgresql, SiPrisma, SiPython, SiReact, SiTableau, SiTypescript, SiUbuntu, SiUnity } from "react-icons/si"
+import { SiAmazonaws, SiCsharp, SiDigitalocean, SiDocker, SiJavascript, SiMariadb, SiMongodb, SiNextdotjs, SiPostgresql, SiPrisma, SiPython, SiReact, SiTableau, SiTypescript, SiUbuntu, SiUnity, SiVercel } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
 import { useState } from "react"
 import useWindowDimensions from "Main/hooks/useWindowDimensions"
@@ -129,6 +129,9 @@ const SkillsSection = () => {
                 </ListItem>
                 <ListItem>
                   <ListIcon as={SiAmazonaws} /> AWS (Learning)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={SiVercel} />Vercel (hosting this site)
                 </ListItem>
               </ExpandableList>
             </GridItem>
