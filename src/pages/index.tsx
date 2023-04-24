@@ -178,13 +178,13 @@ export default function Index({ allPosts }: Props) {
           }
         </Box>
         <Spacer h={isMobile ? 5 : 15} />
-        <AboutMe />
-        <Spacer h={isMobile ? 5 : 15} />
-        <EducationSection />
-        <Spacer h={isMobile ? 5 : 15} />
         <SkillsSection />
         <Spacer h={isMobile ? 5 : 15} />
         <ProjectsSection />
+        <Spacer h={isMobile ? 5 : 15} />
+        <AboutMe />
+        <Spacer h={isMobile ? 5 : 15} />
+        <EducationSection />
       </Box>
 
 
