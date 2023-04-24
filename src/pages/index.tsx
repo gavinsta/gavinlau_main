@@ -2,7 +2,7 @@
 import { Inter } from '@next/font/google'
 import NextLink from 'next/link'
 import {
-  Heading, GridItem, Box, Text, HStack, Spacer, Stack, SimpleGrid, IconButton, Link
+  Heading, GridItem, Box, Text, HStack, Spacer, Stack, SimpleGrid, IconButton, Link, ButtonGroup
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
 import useCheckMobileScreen from 'Main/hooks/useCheckMobileScreen'
@@ -14,6 +14,7 @@ import ProjectsSection from 'Main/components/mainpage-sections/ProjectsSection'
 import AboutMe from 'Main/components/mainpage-sections/AboutMeSection'
 import EducationSection from 'Main/components/mainpage-sections/EducationSection'
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -118,6 +119,21 @@ function IndexMenu() {
       icon={<AiOutlineMenuUnfold />} />
   </>)
 }
+/**Component that has all of my professional links (github, linkedin, etc.) */
+function Links() {
+
+  return <ButtonGroup>
+    <Link href="https://github.com/gavinsta" p={1}>
+
+
+      <IconButton aria-label='Link to Github profile' icon={<SiGithub />} />
+    </Link>
+    <Link p={1} href="https://www.linkedin.com/in/data-scientist-programmer-gamedev-gavin-lau/">
+      <IconButton aria-label='Link to LinkedIn profile' icon={<SiLinkedin />} />
+    </Link>
+
+  </ButtonGroup>
+}
 export default function Index({ allPosts }: Props) {
   const isMobile = useCheckMobileScreen()
 
@@ -151,7 +167,8 @@ export default function Index({ allPosts }: Props) {
           >
             <ProfilePicture />
             <Heading fontSize={40}>Gavin Lau</Heading>
-            <Text textAlign={'center'}>Data Science, Programming and Neuroscience</Text>
+            <Text textAlign={'center'}>Data Scientist and Programmer based in Calgary.</Text>
+            <Links />
           </Stack> :
             <HStack>
               <HStack
@@ -168,12 +185,13 @@ export default function Index({ allPosts }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { delay: 1, duration: 1, bounce: 0.3, type: 'spring' } }}
                   >
-                    <Text>Data Science, Programming and Neuroscience</Text>
+                    <Text>Data Scientist and Programmer based in Calgary.</Text>
                   </Box>
+                  <Links />
+
                 </Stack>
 
               </HStack>
-
             </HStack>
           }
         </Box>
