@@ -5,14 +5,13 @@ export const CardStyle = defineStyleConfig({
   baseStyle: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'linear-gradient(35deg, #3E3E3B 50%,#1C1C1A) ',
+    background: 'black',//'linear-gradient(35deg, #3E3E3B 50%,#1C1C1A) ',
     alignItems: 'center',
     gap: 6,
-    transition: 'transform 0.5s ease-in-out',
+    transition: 'transform 0.3s ease-in-out',
     _hover: {
       boxShadow: '2xl',
-      transform: 'scale(1.1)',
-      transition: 'transform 0.5s ease-in-out',
+      transition: 'transform 0.2s ease-in-out',
     }
   },
   // Two variants: rounded and smooth

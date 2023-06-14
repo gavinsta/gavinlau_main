@@ -1,0 +1,72 @@
+.mdbody {
+	background-color: #414141;
+	color: #ffffff;
+	font: 15px Helvetica, arial, freesans, clean, sans-serif;
+	word-wrap: break-word;
+	line-height: 1.7;
+	padding: 0 20px 20px 20px;
+	width: 722px;
+	-webkit-font-smoothing: antialiased;
+	}
+
+.md a {
+	color: #4183c4;
+	text-decoration: none;
+	}
+
+.md a:hover {
+	text-decoration: underline;
+	}
+
+.md p, blockquote, ul, ol, dl, table, pre {
+	margin: 15px 0;
+	}
+
+.md ul, ol {
+	padding-left: 30px;
+	}
+
+.md h1 {
+	border-bottom: 1px solid #ddd;
+	color: #ffffff;
+	font-size: 2.5em;
+	}
+
+.md h2 {
+	border-bottom: 1px solid #eee;
+	color: #bdbdbd;
+	font-size: 2.0em;
+	}
+
+.md h3 {
+	font-size: 1.5em;
+	}
+
+.md h4 {
+	font-size: 1.2em;
+	}
+
+.md h5 {
+	font-size: 1.0em;
+	}
+
+.md h6 {
+	color: #777;
+	font-size: 1.0em;
+	}
+
+.md h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.7;
+	margin: 1em 0 15px 0;
+	}
+
+.md h1 + p, h2 + p, h3 + p {
+	margin-top: 10px;
+	}
+	
+.md img {
+	max-width: 100%;
+	}
+
+@billtubbs

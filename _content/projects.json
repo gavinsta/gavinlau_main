@@ -1,0 +1,22 @@
+{
+  "webprojects": [
+    {
+      "display": "false",
+      "title": "Billboard House",
+      "description": "A Wordpress site to manage an event venue. The primary purpose of this site was to be easily customizable for the cliient. The client can easily add new events, manage the calendar, and update the site's content.",
+      "url": "https://billboardhouse.net"
+    },
+    {
+      "display": "true",
+      "title": "Cumby Digital",
+      "description": "I built a lightweight web app for managing digital signage advertisement in Cumby Texas. The site handles administrative tasks such as advertisement reviewing, scheduling capabilities and payment processing using Stripe's API.",
+      "url": "https://cumbydigital.com"
+    },
+    {
+      "display": "true",
+      "title": "Andromeda Medical Imaging Inc.",
+      "description": "I helped create some of the core components of Andromeda's SPIRAL algorithm during my undergraduate thesis, and was brought on as the Technical Lead to help create a fully functional, web-based imaging/ clinical assistance tool. I'm leveraging my ML skills and knowledge to help improve SPIRAL's performance as well as creating the website and web API.",
+      "url": "https://andromedamedicalimaging.com"
+    }
+  ]
+}

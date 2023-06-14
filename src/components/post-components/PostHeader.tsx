@@ -1,9 +1,9 @@
 import { Heading } from "@chakra-ui/react";
 
-const Header = () => {
+const BlogHeader = () => {
   return (<Heading>
     GL
   </Heading>)
 }
 
-export default Header
+export default BlogHeader
