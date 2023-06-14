@@ -64,17 +64,16 @@ export default function CollapsibleSection(props: CollapsibleSectionProps) {
         <> </>
       ) : (
         <>
-          <Divider />
-          <Center p={0}>
-            <Badge
-              onClick={() => {
-                setCollapsed(!collapsed);
-              }}
-              _hover={{ cursor: "pointer" }}
-            >
-              {collapsed ? "Expand" : "Collapse"}
-            </Badge>
-          </Center>
+          {/* <Divider /> */}
+
+          <Badge
+            onClick={() => {
+              setCollapsed(!collapsed);
+            }}
+            _hover={{ cursor: "pointer" }}
+          >
+            {collapsed ? "Expand" : "Collapse"}
+          </Badge>
         </>
       )}
     </Box>
