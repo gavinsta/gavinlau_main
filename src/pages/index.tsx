@@ -104,7 +104,7 @@ export default function Index({ allPosts }: Props) {
               <ProfilePicture />
               <Heading fontSize={40}>Gavin Lau</Heading>
               <Text textAlign={"center"}>
-                Data Scientist and Programmer based in Calgary.
+                Data Scientist, Programmer and Game Developer based in Calgary.
               </Text>
               <Links />
             </Stack>
@@ -135,7 +135,10 @@ export default function Index({ allPosts }: Props) {
                       },
                     }}
                   >
-                    <Text>Data Scientist and Programmer based in Calgary.</Text>
+                    <Text>
+                      Data Scientist, Programmer and Game Developer based in
+                      Calgary.
+                    </Text>
                   </Box>
                   <Links />
                 </Stack>
@@ -152,7 +155,10 @@ export default function Index({ allPosts }: Props) {
         <Spacer h={isMobile ? 5 : 15} />
         <EducationSection />
       </Box>
-      <RecentPosts posts={allPosts.slice(0, 4)} columns={2} />
+      <RecentPosts
+        posts={allPosts.filter((p) => p.visibility === "public")}
+        columns={2}
+      />
     </>
   );
 }
