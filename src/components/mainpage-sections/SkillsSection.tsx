@@ -187,7 +187,6 @@ const SkillsSection = () => {
   return (
     <CollapsibleSection title="Technical Skills 💻" id="technical-skills">
       <Text p={3} textAlign={"center"}>
-        /
         {`I've picked up a lot of skills as a hobbyist and professionally, and I'm
         actively learning many more.`}
       </Text>
