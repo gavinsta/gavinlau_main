@@ -28,7 +28,7 @@ import { useState } from "react";
 import PostPreview from "Main/components/post-components/PostPreview";
 import NavBar from "Main/components/page-layout/NavBar";
 import CollapsibleSection from "Main/components/page-layout/CollapsibleSection";
-import RecentPosts from "Main/components/post-components/RecentPosts";
+import RecentPosts from "Main/components/mainpage-sections/RecentPosts";
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {

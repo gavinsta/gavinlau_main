@@ -1,8 +1,8 @@
 import { SimpleGrid, GridItem, Text } from "@chakra-ui/react";
 import Post from "Main/interfaces/post";
 import CollapsibleSection from "Main/components/page-layout/CollapsibleSection";
-import PostPreview from "./PostPreview";
-import PostsGridDisplay from "./PostsGridDisplay";
+import PostPreview from "../post-components/PostPreview";
+import PostsGridDisplay from "../post-components/PostsGridDisplay";
 type Props = { posts: Post[]; columns: number };
 const RecentPosts = (props: Props) => {
   const { posts, columns } = props;
@@ -12,8 +12,8 @@ const RecentPosts = (props: Props) => {
         <PostsGridDisplay posts={posts} columns={columns} />
       ) : (
         <Text textAlign={"center"}>
-          I'll be putting up some of my personal notes, devlogs and guides
-          shortly!
+          {`I'll be putting up some of my personal notes, devlogs and guides
+          shortly!`}
         </Text>
       )}
     </CollapsibleSection>

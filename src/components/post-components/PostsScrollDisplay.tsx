@@ -84,7 +84,7 @@ const PostsScrollDisplay = (props: Props) => {
           <SimpleGrid columns={props.columns} spacing={5}>
             {props.posts.map((post) =>
               post.visibility === "public" ? (
-                <GridItem>
+                <GridItem key={post.slug}>
                   <PostCard post={post} rotateX={rotateX} rotateY={rotateY} />
                 </GridItem>
               ) : (

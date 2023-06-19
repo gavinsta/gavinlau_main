@@ -89,8 +89,8 @@ export default function NavBar(props: NavBarProps) {
         >
           {props.links.map((link) => {
             return (
-              <GridItem>
-                <Link as={NextLink} href={link.href} key={link.name}>
+              <GridItem key={link.name}>
+                <Link as={NextLink} href={link.href}>
                   ◾️ {link.name}
                 </Link>
               </GridItem>

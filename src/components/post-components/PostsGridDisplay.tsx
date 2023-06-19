@@ -8,7 +8,7 @@ const PostsGridDisplay = (props: Props) => {
     <SimpleGrid columns={props.columns} spacing={5}>
       {props.posts.map((post) =>
         post.visibility === "public" ? (
-          <GridItem>
+          <GridItem key={post.slug}>
             <PostPreview
               key={post.slug}
               title={post.title}

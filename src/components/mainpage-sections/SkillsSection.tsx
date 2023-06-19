@@ -187,8 +187,9 @@ const SkillsSection = () => {
   return (
     <CollapsibleSection title="Technical Skills 💻" id="technical-skills">
       <Text p={3} textAlign={"center"}>
-        I've picked up a lot of skills as a hobbyist and professionally, and I'm
-        actively learning many more.
+        /
+        {`I've picked up a lot of skills as a hobbyist and professionally, and I'm
+        actively learning many more.`}
       </Text>
       <SimpleGrid
         columns={isMobile ? 1 : Math.floor(width / 400)}
@@ -201,20 +202,20 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Statistics & Machine Learning"
             iconsWhenCollapsed={[
-              <Icon as={ImStatsBars} />,
-              <Icon as={SiTensorflow} />,
+              <Icon key={"stats"} as={ImStatsBars} />,
+              <Icon key={"tf"} as={SiTensorflow} />,
             ]}
           >
-            <ListItem>IBM SPSS</ListItem>
-            <ListItem>R and R Studio</ListItem>
-            <ListItem>
+            <ListItem key={0}>IBM SPSS</ListItem>
+            <ListItem key={1}>R and R Studio</ListItem>
+            <ListItem key={2}>
               Regression Techniques (Linear, Multinomial, Tree)
             </ListItem>
-            <ListItem>Clustering Techniques</ListItem>
-            <ListItem>
+            <ListItem key={3}>Clustering Techniques</ListItem>
+            <ListItem key={4}>
               Fundmanetal Statistical Tests (T-test, Chi-squared, etc.)
             </ListItem>
-            <ListItem>
+            <ListItem key={5}>
               <ListIcon as={SiTensorflow} />
               Tensorflow & Keras
             </ListItem>
@@ -224,29 +225,29 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Programming Languages"
             iconsWhenCollapsed={[
-              <Icon as={SiCsharp} />,
-              <Icon as={SiPython} />,
-              <Icon as={SiJavascript} />,
-              <Icon as={SiTypescript} />,
+              <Icon key={"cs"} as={SiCsharp} />,
+              <Icon key={"python"} as={SiPython} />,
+              <Icon key={"js"} as={SiJavascript} />,
+              <Icon key={"ts"} as={SiTypescript} />,
             ]}
           >
-            <ListItem>
+            <ListItem key={6}>
               <ListIcon as={SiCsharp} />
               C#
             </ListItem>
-            <ListItem>
+            <ListItem key={7}>
               <ListIcon as={SiPython} />
               Python
             </ListItem>
-            <ListItem>
+            <ListItem key={8}>
               <ListIcon as={FaJava} />
               Java
             </ListItem>
-            <ListItem>
+            <ListItem key={9}>
               <ListIcon as={SiJavascript} />
               Javascript
             </ListItem>
-            <ListItem>
+            <ListItem key={10}>
               <ListIcon as={SiTypescript} />
               Typescript
             </ListItem>
@@ -256,21 +257,20 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Full Stack Web Development"
             iconsWhenCollapsed={[
-              <Icon as={SiReact} />,
-              <Icon as={SiNextdotjs} />,
-              <Icon as={SiUnity} />,
-              <Icon as={SiChakraui} />,
+              <Icon key={"react"} as={SiReact} />,
+              <Icon key={"next"} as={SiNextdotjs} />,
+              <Icon key={"chakraui"} as={SiChakraui} />,
             ]}
           >
-            <ListItem>
+            <ListItem key={11}>
               <ListIcon as={SiChakraui} />
               Chakra UI (one of my absolute favorite tools!)
             </ListItem>
-            <ListItem>
+            <ListItem key={12}>
               <ListIcon as={SiReact} />
               React
             </ListItem>
-            <ListItem>
+            <ListItem key={13}>
               <ListIcon as={SiNextdotjs} />
               NEXT.js (what this site is built on)
             </ListItem>
@@ -281,17 +281,17 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Visualization Tools"
             iconsWhenCollapsed={[
-              <Icon as={SiPlotly} />,
-              <Icon as={SiTableau} />,
+              <Icon key={"plotly"} as={SiPlotly} />,
+              <Icon key={"tableau"} as={SiTableau} />,
             ]}
           >
-            <ListItem>D3.js</ListItem>
-            <ListItem>
+            <ListItem key={14}>D3.js</ListItem>
+            <ListItem key={15}>
               <ListIcon as={SiPlotly} />
               Plotly (JS and Python)
             </ListItem>
-            <ListItem>MatPlotLib</ListItem>
-            <ListItem>
+            <ListItem key={16}>MatPlotLib</ListItem>
+            <ListItem key={17}>
               <ListIcon as={SiTableau} />
               Tableau
             </ListItem>
@@ -301,27 +301,27 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Cloud & Environments"
             iconsWhenCollapsed={[
-              <Icon as={SiDigitalocean} />,
-              <Icon as={SiUbuntu} />,
-              <Icon as={SiDocker} />,
+              <Icon key={"digitalocean"} as={SiDigitalocean} />,
+              <Icon key="ubuntu" as={SiUbuntu} />,
+              <Icon key="docker" as={SiDocker} />,
             ]}
           >
-            <ListItem>
+            <ListItem key={18}>
               <ListIcon as={SiDocker} />
               Docker
             </ListItem>
-            <ListItem>
+            <ListItem key={19}>
               <ListIcon as={SiDigitalocean} />
               Digital Ocean
             </ListItem>
-            <ListItem>
+            <ListItem key={20}>
               <ListIcon as={SiUbuntu} />
               Ubuntu (Linux VM)
             </ListItem>
-            <ListItem>
+            <ListItem key={21}>
               <ListIcon as={SiAmazonaws} /> AWS
             </ListItem>
-            <ListItem>
+            <ListItem key={22}>
               <ListIcon as={SiVercel} />
               Vercel (hosting this site)
             </ListItem>
@@ -331,20 +331,20 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Databases"
             iconsWhenCollapsed={[
-              <Icon as={SiPrisma} />,
-              <Icon as={SiMariadb} />,
-              <Icon as={SiPostgresql} />,
+              <Icon key="prisma" as={SiPrisma} />,
+              <Icon key="mariadb" as={SiMariadb} />,
+              <Icon key="postgres" as={SiPostgresql} />,
             ]}
           >
-            <ListItem>
+            <ListItem key={23}>
               <ListIcon as={SiPrisma} />
               Prisma
             </ListItem>
-            <ListItem>
+            <ListItem key={24}>
               <ListIcon as={SiMariadb} />
               SQL (MariaDB)
             </ListItem>
-            <ListItem>
+            <ListItem key={25}>
               <ListIcon as={SiPostgresql} />
               PostgreSQL
             </ListItem>
@@ -356,9 +356,9 @@ const SkillsSection = () => {
         <GridItem h={"300px"}>
           <ExpandableList
             listName="Game Dev"
-            iconsWhenCollapsed={[<Icon as={SiUnity} />]}
+            iconsWhenCollapsed={[<Icon key="unity" as={SiUnity} />]}
           >
-            <ListItem>
+            <ListItem key={26}>
               <ListIcon as={SiUnity} />
               Unity
             </ListItem>
@@ -368,16 +368,16 @@ const SkillsSection = () => {
           <ExpandableList
             listName="Art & Design"
             iconsWhenCollapsed={[
-              <Icon as={SiAdobephotoshop} />,
-              <Icon as={SiSketchup} />,
+              <Icon key="photoshop" as={SiAdobephotoshop} />,
+              <Icon key="sketchup" as={SiSketchup} />,
             ]}
           >
-            <ListItem>
+            <ListItem key={27}>
               <ListIcon as={SiAdobephotoshop} />
               Photoshop
             </ListItem>
-            <ListItem>Procreate (iOS app)</ListItem>
-            <ListItem>
+            <ListItem key={28}>Procreate (iOS app)</ListItem>
+            <ListItem key={29}>
               <ListIcon as={SiSketchup} />
               Sketchup
             </ListItem>
