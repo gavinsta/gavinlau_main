@@ -21,12 +21,22 @@ import rehypeHighlight from "rehype-highlight";
 import remarkSlug from "remark-slug";
 import remarkImages from "remark-images";
 
-import SlideInSection from "../SlideInSection";
-import CollapsibleSection from "../page-layout/CollapsibleSection";
+import CollapsibleSection from "Main/components/page-layout/CollapsibleSection";
 
-const content = `I made this site because I have so many different interests and I wanted to have a place to share them. I mostly work as a software developer and a datascientist, but I am also working on my own [indie game](projects), which consumes most of my spare time.
+const content = `## Hi, I'm Gavin \n
+Thanks for stopping by! 
+
+I'm a Datascientist and Programmer, currenty working at [Andromeda Medical Imaging](https://andromedamedicalimaging.com) as a Technical Lead.
+
+I mostly work as a software developer and a datascientist, but I am also working on my own [indie game](projects), which consumes most of my spare time.
 
 I like to make music, play video games, and rock climb (I know, sooo original).
+
+## What is this site?
+
+Before I made this site, I had so many different interests and experiences, but no where to share and store them all in an organized fashion. This page is really just a glorified list of links that connect all my various activities.\n
+
+I also figure this is a great place for me to experiment with new technologies, and show my love for design, so expect this site to change a lot over time.
 `;
 
 const AboutMe = () => {
@@ -34,6 +44,17 @@ const AboutMe = () => {
   return (
     <CollapsibleSection title="About Me 🦾" id="about-me">
       <SimpleGrid columns={isMobile ? 1 : 3} fontSize="lg" spacing={5}>
+        <GridItem>
+          <Stack justifyContent={"center"}>
+            <Image
+              w={400}
+              borderRadius={50}
+              alt="Hanging out with an alpaca."
+              src="/photos/gavin-lau-profile-with-an-alpaca.jpeg"
+            />
+            <Text wordBreak={"normal"}></Text>
+          </Stack>
+        </GridItem>
         <GridItem colSpan={isMobile ? 1 : 2}>
           <ReactMarkdown
             className="md"
@@ -52,7 +73,8 @@ const AboutMe = () => {
               src="/photos/climbing-shadow-of-mountain.jpg"
             />
             <Text wordBreak={"normal"}>
-              Here I am climbing a beautiful 8a+ on Lamma Island in Hong Kong.
+              Shadow of the Mountain: a beautiful 8a+ on Lamma Island in Hong
+              Kong.
             </Text>
           </Stack>
         </GridItem>

@@ -8,7 +8,7 @@ import { ChakraBaseProvider } from "@chakra-ui/react";
 import "@fontsource/montserrat";
 import "@fontsource/yeseva-one";
 import "@fontsource/nunito";
-import theme from "Main/components/extendedTheme/extendedTheme";
+import theme from "Main/components/theme/theme";
 import Fonts from "Main/fonts/Fonts";
 export default function App({ Component, pageProps }: AppProps) {
   return (

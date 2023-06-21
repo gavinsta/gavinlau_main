@@ -5,6 +5,8 @@ import {
   SimpleGrid,
   GridItem,
   Link,
+  Button,
+  Stack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import useCheckMobileScreen from "Main/hooks/useCheckMobileScreen";
@@ -15,6 +17,10 @@ import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 interface NavBarProps {
   links: { name: string; href: string }[];
+  buttons?: {
+    name: string;
+    action?: () => void;
+  }[];
 }
 export default function NavBar(props: NavBarProps) {
   const [collapsed, setCollapsed] = useState(false);
@@ -50,7 +56,8 @@ export default function NavBar(props: NavBarProps) {
   };
   return (
     <>
-      <HStack
+      <Stack
+        direction={isMobile ? "column" : "row"}
         position={"fixed"}
         padding={1}
         pl={2}
@@ -90,14 +97,28 @@ export default function NavBar(props: NavBarProps) {
           {props.links.map((link) => {
             return (
               <GridItem key={link.name}>
-                <Link as={NextLink} href={link.href}>
-                  ◾️ {link.name}
+                <Link textAlign={"left"} as={NextLink} href={link.href}>
+                  {link.name}
                 </Link>
               </GridItem>
             );
           })}
+
+          {props.buttons ? (
+            props.buttons.map((button) => {
+              return (
+                <GridItem key={button.name}>
+                  <Link textAlign={"left"} onClick={button.action}>
+                    {button.name}
+                  </Link>
+                </GridItem>
+              );
+            })
+          ) : (
+            <></>
+          )}
         </SimpleGrid>
-      </HStack>
+      </Stack>
       <IconButton
         bg="background.gunmetal"
         position={"fixed"}

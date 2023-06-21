@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fulldev": "ts-node --project tsconfig.server.json server/index.ts"
+    "fulldev": "ts-node --project tsconfig.server.json server/index.ts",
+    "theme": "chakra-cli tokens src/components/theme/extendedTheme.ts",
+    "theme:watch": "chakra-cli tokens src/components/theme/extendedTheme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",
@@ -44,6 +46,7 @@
     "unified": "^10.1.2"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
     "@types/express": "^4.17.16",
     "@types/node": "^18.11.18",
     "@types/react": "18.0.27",

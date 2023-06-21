@@ -1,7 +1,20 @@
 {
   "webprojects": [
     {
-      "display": "false",
+      "display": "true",
+      "title": "Andromeda Medical Imaging Inc.",
+      "description": "I helped create some of the core components of Andromeda's SPIRAL algorithm during my undergraduate thesis, and was brought on as the Technical Lead to help create a fully functional, web-based imaging/ clinical assistance tool. I'm leveraging my ML skills and knowledge to help improve SPIRAL's performance as well as creating the website and web API.",
+      "url": "https://andromedamedicalimaging.com"
+    },
+    {
+      "display": "true",
+      "title": "An NBA Fantasy Team Game Simulator",
+      "description": "We created a web app that allows users to create a fantasy team of NBA players and simulate a game between two teams. We web-scraped basketballreference.com to pull player stats and used a variety of machine learning techniques to simulate a game. We used NodeJS and React to for the web app, and the data is stored on a MariaDB container. It is deployed to Digital Ocean.\n\nUse roomcode: \"DEMO\" if you want to try it out!",
+      "url": "https://datanerds.lol/home",
+      "screenshot": "/screenshots/nba_simulator_drafting_screenshot.png"
+    },
+    {
+      "display": "true",
       "title": "Billboard House",
       "description": "A Wordpress site to manage an event venue. The primary purpose of this site was to be easily customizable for the cliient. The client can easily add new events, manage the calendar, and update the site's content.",
       "url": "https://billboardhouse.net"
@@ -11,12 +24,59 @@
       "title": "Cumby Digital",
       "description": "I built a lightweight web app for managing digital signage advertisement in Cumby Texas. The site handles administrative tasks such as advertisement reviewing, scheduling capabilities and payment processing using Stripe's API.",
       "url": "https://cumbydigital.com"
+    }
+  ],
+  "datascience": [
+    {
+      "display": "true",
+      "title": "What makes a good videogame?",
+      "host": "https://observablehq.com",
+      "iframe": "https://observablehq.com/embed/@gavinsta/what-makes-a-good-video-game?cell=*",
+      "url": "https://observablehq.com/@gavinsta/what-makes-a-good-video-game",
+      "description": "I used the Internet Game Database (IGDB) to examine some of the most common and successful trends in videogames over the last 40 years. This was my first time using D3, a powerful Javascript library for rendering beautiful interactive graphics that can easily be inserted into webpages. I pulled the sales data of over 200,000 games as well, but didn't get a chance to compare how videogame features related to its commercial success.",
+      "tags": ["article", "d3"]
     },
     {
       "display": "true",
-      "title": "Andromeda Medical Imaging Inc.",
-      "description": "I helped create some of the core components of Andromeda's SPIRAL algorithm during my undergraduate thesis, and was brought on as the Technical Lead to help create a fully functional, web-based imaging/ clinical assistance tool. I'm leveraging my ML skills and knowledge to help improve SPIRAL's performance as well as creating the website and web API.",
-      "url": "https://andromedamedicalimaging.com"
+      "title": "Tableau Work",
+      "cover": "/screenshots/airbnb_datathon.png",
+      "url": "/projects/tableau",
+      "description": "I've built multiple Tableau Dashboards for various datasets and in mini-datathons. I don't have them hosted, so most of the interaction is missing, but the post does demonstrate my ability to use Tableau.",
+      "tags": ["dashboards", "tableau"]
+    },
+    {
+      "display": "true",
+      "title": "Exploration of Regression Techniques using IMDb",
+      "cover": "/screenshots/imdb_analysis_cover.png",
+      "url": "https://docs.google.com/document/d/1yfhXy4HVekE79zb6PvsjFbPNd_fA9sHP51N-LBb1xuY/edit?usp=sharing",
+      "iframe": "https://docs.google.com/document/d/e/2PACX-1vTc3opVinFINt6UX_Wi6OdrFvV9MMdFGnse69_HXalH6oeiaMbalqqRFHAVFYLGp2Rs99bsFVd_kRg5/pub?embedded=true",
+      "description": "We explored multiple ways to apply regression techniques to a selection of IMDb data. We used a variety of techniques to try and predict the IMDb rating of a movie based on its features. We also used regression techniques to try and predict the gross revenue of a movie based on its features.",
+      "tags": ["report", "r"]
+    },
+    {
+      "display": "true",
+      "title": "Audio Emotion Detection",
+      "description": "Using publically available audio datasets, we attempted to train multiple deep learning neural network models to detect the emotion of a speaker. We used the RAVDESS, CREMA-D, TESS and SAVEE datasets, which all feature various actors or actresses speaking in different emotions. We used the Librosa library to extract features from the audio files, and then trained multiple models, from Support Vector Machine to using TensorFlow's Keras to create a deep-learning model.",
+      "url": "https://docs.google.com/document/d/1G6rlUG3H_8vcZIql6QaRi_gmXclhB2lEDyfL3mvDkjw/edit?usp=sharing",
+      "iframe": "https://docs.google.com/document/d/e/2PACX-1vToWxO9onEP1dQFAa-qIHPxKxzZCJvhy3cD6E8p3yFUxErKpCT6EUXu4z1q4nYhDWnxEbuWZsAXWvzn/pub?embedded=true",
+      "cover": "/screenshots/audio_emotion_cover2.png",
+      "tags": ["report", "deep-learning"]
+    },
+    {
+      "display": "true",
+      "title": "Exploration of Health and Economic Data",
+      "cover": "/screenshots/health_econ_graphic.png",
+      "url": "https://colab.research.google.com/drive/1zLV0kuoOvaudT2qkBBhf-IspIa50UzRa?usp=sharing",
+      "description": "Using datasets from the WHO and World Bank, we explored the relationship between a country's health and economic status. This was .",
+      "tags": ["report", "google-colab", "eda"]
+    },
+    {
+      "display": "true",
+      "title": "An NBA Fantasy Team Game Simulator",
+      "description": "We created a web app that allows users to create a fantasy team of NBA players and simulate a game between two teams. We web-scraped basketballreference.com to pull player stats and used a variety of machine learning techniques to simulate a game. We used NodeJS and React to for the web app, and the data is stored on a MariaDB container. It is deployed to Digital Ocean.\n\nUse roomcode: \"DEMO\" if you want to try it out!",
+      "url": "https://datanerds.lol/home",
+      "cover": "/screenshots/nba_simulator_drafting_screenshot.png",
+      "tags": ["stats", "machine-learning", "web-app"]
     }
   ]
 }

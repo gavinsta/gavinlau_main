@@ -29,6 +29,7 @@ export default function CollapsibleSection(props: CollapsibleSectionProps) {
     <Box
       id={props.id}
       padding={isMobile ? 5 : props.padding}
+      pt={props.pt}
       as={motion.div}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
